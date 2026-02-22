@@ -1,4 +1,4 @@
-filename,reference,date,address,decision,applicant
-APPLICATION_FORM_-_WITHOUT_PERSONAL_DATA-6344367.txt,,,Woodland,,Leeds LS2
-SPLIT_DECISION_TREE_WORKS-6460222.txt,25/07499/TR,17 February 2026,"Land Next To 29, Moor Drive, Headingley, Leeds,","PART REFUSAL, PART APPROVAL",Leeds LS2
-TREE_WORKS_OFFICER_REPORT-6460224.txt,25/07499/TR,,,APPROVED,Leeds LS2
+filename,reference,reference_confidence,date,date_confidence,address,address_confidence,decision,decision_confidence,applicant,applicant_confidence
+APPLICATION_FORM_-_WITHOUT_PERSONAL_DATA-6344367.txt,,0.0,,0.0,Woodland,0.6,,0.0,Leeds LS2,0.6
+SPLIT_DECISION_TREE_WORKS-6460222.txt,25/07499/TR,1.0,17 February 2026,1.0,"Land Next To 29, Moor Drive, Headingley, Leeds,",1.0,"PART REFUSAL, PART APPROVAL",1.0,Leeds LS2,0.6
+TREE_WORKS_OFFICER_REPORT-6460224.txt,25/07499/TR,1.0,,0.0,,0.0,APPROVED,1.0,Leeds LS2,0.6

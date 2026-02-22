@@ -47,14 +47,37 @@ def extract_applicant(text):
     people = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
     return people[0] if people else None
 
+def confidence_score(value, method="regex"):
+    if value is None:
+        return 0.0
+    if method == "regex":
+        return 1.0
+    if method == "spacy":
+        return 0.6
+    return 0.5
+
 def extract_all(text, filename):
+    reference = extract_reference(text)
+    date      = extract_date(text)
+    address   = extract_address(text)
+    decision  = extract_decision(text)
+    applicant = extract_applicant(text)
+
+    # Address uses spaCy fallback so lower confidence
+    address_method = "regex" if re.search(r'At:\s*\n', text) else "spacy"
+
     return {
-        "filename":  filename,
-        "reference": extract_reference(text),
-        "date":      extract_date(text),
-        "address":   extract_address(text),
-        "decision":  extract_decision(text),
-        "applicant": extract_applicant(text),
+        "filename":             filename,
+        "reference":            reference,
+        "reference_confidence": confidence_score(reference),
+        "date":                 date,
+        "date_confidence":      confidence_score(date),
+        "address":              address,
+        "address_confidence":   confidence_score(address, address_method),
+        "decision":             decision,
+        "decision_confidence":  confidence_score(decision),
+        "applicant":            applicant,
+        "applicant_confidence": confidence_score(applicant, "spacy"),
     }
 
 # ── Run extractor on all processed text files ──────────────────────────────

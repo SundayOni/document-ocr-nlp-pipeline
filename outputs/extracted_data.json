@@ -2,25 +2,40 @@
   {
     "filename": "APPLICATION_FORM_-_WITHOUT_PERSONAL_DATA-6344367.txt",
     "reference": null,
+    "reference_confidence": 0.0,
     "date": null,
+    "date_confidence": 0.0,
     "address": "Woodland",
+    "address_confidence": 0.6,
     "decision": null,
-    "applicant": "Leeds LS2"
+    "decision_confidence": 0.0,
+    "applicant": "Leeds LS2",
+    "applicant_confidence": 0.6
   },
   {
     "filename": "SPLIT_DECISION_TREE_WORKS-6460222.txt",
     "reference": "25/07499/TR",
+    "reference_confidence": 1.0,
     "date": "17 February 2026",
+    "date_confidence": 1.0,
     "address": "Land Next To 29, Moor Drive, Headingley, Leeds,",
+    "address_confidence": 1.0,
     "decision": "PART REFUSAL, PART APPROVAL",
-    "applicant": "Leeds LS2"
+    "decision_confidence": 1.0,
+    "applicant": "Leeds LS2",
+    "applicant_confidence": 0.6
   },
   {
     "filename": "TREE_WORKS_OFFICER_REPORT-6460224.txt",
     "reference": "25/07499/TR",
+    "reference_confidence": 1.0,
     "date": null,
+    "date_confidence": 0.0,
     "address": null,
+    "address_confidence": 0.0,
     "decision": "APPROVED",
-    "applicant": "Leeds LS2"
+    "decision_confidence": 1.0,
+    "applicant": "Leeds LS2",
+    "applicant_confidence": 0.6
   }
 ]
